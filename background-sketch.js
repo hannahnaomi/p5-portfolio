@@ -45,18 +45,16 @@ function update() {
   for(let i = 0; i < numAgents; i +=1)  {
       let angle = noise(agents[i].x * noiseScale, agents[i].y * noiseScale) * 0.25 * PI
 
-  agents[i].x += sin(angle) * stepSize
-  agents[i].y += cos(angle) * stepSize
+      agents[i].x += sin(angle) * stepSize
+      agents[i].y += cos(angle) * stepSize
 
-  if((agents[i].x > width) || (agents[i].x < 0) || (agents[i].y > height) || (agents[i].y < 0)) {
-    agents[i].x = random(width)
-    agents[i].y = random(height)
-
+      if((agents[i].x > width) || (agents[i].x < 0) || (agents[i].y > height) || (agents[i].y < 0)) {
+        agents[i].x = random(width)
+        agents[i].y = random(height)
+      }
     }
   }
 
-  function windowResized()  {
-    setup()
-  }
-
+function windowResized()  {
+  resizeCanvas(windowWidth, windowHeight);
 }
