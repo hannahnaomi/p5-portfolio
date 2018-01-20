@@ -54,4 +54,9 @@ function update() {
 
     }
   }
+
+  function windowResized()  {
+    setup()
+  }
+
 }
