@@ -43,7 +43,7 @@ function draw() {
 
 function update() {
   for(let i = 0; i < numAgents; i +=1)  {
-      let angle = noise(agents[i].x * noiseScale, agents[i].y * noiseScale) * TWO_PI
+      let angle = noise(agents[i].x * noiseScale, agents[i].y * noiseScale) * 0.25 * PI
 
   agents[i].x += sin(angle) * stepSize
   agents[i].y += cos(angle) * stepSize
